@@ -1,0 +1,26 @@
+:root{
+    --primary-color: #6A73B6;
+}
+#wrapper{
+    width: 100%;
+    min-height: 500px;
+    background-color: var(--primary-color);
+}
+.header{
+    background-color: aqua;
+}
+.product-img{
+    width: 100%;
+    object-fit: cover;
+}
+.search .fa-magnifying-glass{
+    background-color: yellow;
+    padding: 10px;
+}
+.search .fa-keyboard{
+    background-color:darkgrey;
+    padding: 10px;
+}
+h6{
+    bottom: 10px;
+}
