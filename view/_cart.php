@@ -17,6 +17,22 @@
 </head>
 
 <body>
+    <style>
+        .a{
+            display: flex;
+            width: 160px;
+        }
+        .bia{
+            display: flex;
+        }
+        .buy{
+            background-color: gray;
+        }
+        .tru{
+            width: 30px;
+            height: 35px;
+        }
+    </style>
 
     <?php include 'inc/header.php'; ?>
     <!-- card -->
@@ -51,21 +67,23 @@
                             </div>
                         </td>
                         <td>
+                            <div class="bia">
                             <form action="cart.php" method="post" class="h-8 w-8 text-xl flex items-center justify-center cursor-pointer select-none">
                                 <input type="hidden" name="action" value="update">
                                 <input type="hidden" name="value" value="-1">
                                 <input type="hidden" name="productId" value="<?php echo $order_detail['product_id']; ?>">
-                                <button type="submit">-</button>
+                                <button class="tru" type="submit">-</button>
                             </form>
                             <div class="h-8 w-10 flex items-center justify-center">
                                 <?php echo $order_detail['quantity']; ?>
                             </div>
-                            <form action="cart.php" method="post" class="h-8 w-8 text-xl flex items-center justify-center cursor-pointer select-none">
+                            <form action="cart.php" method="post" class="h-8 w-8 text-xl flex items-center justify-center cursor-pointer select-none m">
                                 <input type="hidden" name="action" value="update">
                                 <input type="hidden" name="value" value="1">
                                 <input type="hidden" name="productId" value="<?php echo $order_detail['product_id']; ?>">
-                                <button type="submit">+</button>
+                                <button class="tru" type="submit">+</button>
                             </form>
+                            </div>
                         </td>
                         <td>$<?php echo total_cart_item($order_detail['price'], $order_detail['quantity']); ?></td>
                     </tr>
@@ -90,13 +108,21 @@
                     <td>Subtotal</td>
                     <td>$<?php echo total_cart(); ?></td>
                 </tr>
+                <tr>
+                    <td>
+                        <div class="buy">
+                            <a href="checkout.php" class="bg-primary border border-primary text-white px-4 py-3 font-medium rounded-md uppercase hover:bg-transparent
+             hover:text-primary transition text-sm w-full block text-center a">
+                                Process to checkout
+                            </a>
+
+                        </div>
+                    </td>
+                </tr>
             </table>
         </div>
     </div>
-    <a href="checkout.php" class="bg-primary border border-primary text-white px-4 py-3 font-medium rounded-md uppercase hover:bg-transparent
-             hover:text-primary transition text-sm w-full block text-center">
-                            Process to checkout
-                        </a>
+
 
     <a href="#" class="to-top">
         <i class="fas fa-chevron-up"></i>

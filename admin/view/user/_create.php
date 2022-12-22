@@ -7,17 +7,16 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Dashboard - SB Admin</title>
-       <link rel="stylesheet" href="../../view/public/admin/css/style.css">
+        <link rel="stylesheet" href="../../view/public/admin/css/style.css">
        <link rel="stylesheet" href="../../view/public/admin/css/styles.css">
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
        <script src="../../view/public/admin/js/all.js " crossorigin="anonymous"></script>
     </head>
-   
     <body class="sb-nav-fixed">
        <?php include_once '../view/inc/_navbar.php' ?>
         <div id="layoutSidenav">
-          <?php include_once '../view/inc/_sideleft.php' ?>
+            <?php include_once '../view/inc/_sideleft.php' ?>
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
@@ -32,42 +31,20 @@
                                 DataTable Example
                             </div>
                             <div class="card-body">
-                                <table id="datatablesSimple">
-                                    <thead>
-                                        <tr>
-                                            <th>STT</th>
-                                            <th>Img</th>
-                                            <th>Name</th>
-                                            <th>#</th>
-                                            <th>#</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>STT</th>
-                                            <th>Img</th>
-                                            <th>Name</th>
-                                            <th>#</th>
-                                            <th>#</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <?php $index = 0; ?>
-                                    <?php foreach($category_list as $category) { ?>         
-                                        <tr>
-                                            <td><?php echo ++$index; ?></td>
-                                            <td><img src="<?php echo $category['img']; ?>" width="70" height="70" /></td>
-                                            <td><?php echo $category['name']; ?></td>
-                                            <td>
-                                            <a class="btn btn-primary" href="edit.php?category_id=<?php echo 
-                                            $category['id']; ?>">Edit</a>
-                                            </td>
-                                            <td>
-                                            <a class="btn btn-danger" href="delete.php?category_id=<?php echo 
-                                            $category['id']; ?> ">Delete</a></td>
-                                        </tr>
-                                        <?php } ?>
-                            </div>
+                            <form action="create.php" method="post">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Email</label>
+                                    <input type="text" name="email" class="form-control" id="exampleInputEmail1" 
+                                    aria-describedby="emailHelp" placeholder="Enter email">
+                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Password</label>
+                                    <input type="text" name="password" class="form-control" id="exampleInputPassword1" 
+                                    placeholder="Enter Password">
+                                </div>
+                                <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                                </form>
                         </div>
                     </div>
                 </main>

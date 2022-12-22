@@ -36,35 +36,35 @@
                                     <thead>
                                         <tr>
                                             <th>STT</th>
-                                            <th>Img</th>
-                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Password</th>
                                             <th>#</th>
                                             <th>#</th>
                                         </tr>
                                     </thead>
-                                    <tfoot>
+                                    <tfoot> 
                                         <tr>
                                             <th>STT</th>
-                                            <th>Img</th>
-                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Password</th>
                                             <th>#</th>
                                             <th>#</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
                                         <?php $index = 0; ?>
-                                    <?php foreach($category_list as $category) { ?>         
+                                    <?php foreach($user_list as $user) { ?>         
                                         <tr>
                                             <td><?php echo ++$index; ?></td>
-                                            <td><img src="<?php echo $category['img']; ?>" width="70" height="70" /></td>
-                                            <td><?php echo $category['name']; ?></td>
+                                            <td><?php echo $user['email']; ?></td>
+                                            <td><?php echo $user['password']; ?></td>
                                             <td>
-                                            <a class="btn btn-primary" href="edit.php?category_id=<?php echo 
-                                            $category['id']; ?>">Edit</a>
+                                            <a class="btn btn-primary" href="edit.php?user_id=<?php echo 
+                                            $user['id']; ?>">Edit</a>
                                             </td>
                                             <td>
-                                            <a class="btn btn-danger" href="delete.php?category_id=<?php echo 
-                                            $category['id']; ?> ">Delete</a></td>
+                                            <a class="btn btn-danger" href="delete.php?user_id=<?php echo 
+                                            $user['id']; ?> ">Delete</a></td>
                                         </tr>
                                         <?php } ?>
                             </div>

@@ -44,17 +44,19 @@
                                     placeholder="Img">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Ảnh</label>
+                                    <label for="exampleInputPassword1">Price</label>
                                     <input type="text" name="price" class="form-control" id="exampleInputPassword1" 
                                     placeholder="price">
                                 </div>
-                               
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">categoy_id</label>
-                                    <input type="text" name="category_id" class="form-control" id="exampleInputPassword1" 
-                                    placeholder="id">  
+                                <div class="form-group mt-2">
+                                    <label for="exampleInputPassword1">Category</label>
+                                    <select name="category_id" class="form-control">
+                                        <?php foreach ($category_list as $category) { ?>
+                                            <option value="<?php echo $category['id']; ?>"><?php echo $category['name']; ?></option>
+                                        <?php } ?>
+                                    </select>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary mt-2">Submit</button>
                                 </form>
                         </div>
                     </div>

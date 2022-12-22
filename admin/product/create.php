@@ -4,14 +4,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['name'];
     $img = $_POST['img'];
     $price = $_POST['price'];
-   
+    $discount = $_POST['discount'];
     $category_id = $_POST['category_id'];
-    insert_product($name, $img, $category_id,$price);
+    insert_product($name, $img, $category_id,$discount,$price);
 
     header('Location: index.php');
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    $product_list = get_all_products();
+    $category_list = get_all_categories();
     include_once '../view/product/_create.php';
 }
+

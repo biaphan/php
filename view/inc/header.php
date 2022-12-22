@@ -52,6 +52,7 @@
                     <?php echo number_cart_product() ?></a></li>
                     <?php if (isset($_SESSION['user'])) { ?>
                     <li class="nav-item"><a href="logout.php" class="nav-link">Logout</a></li>
+                    <li><a class="nav-link" href="<?php echo BASE_URL . '/admin/product'; ?>" class="text-gray-200 hover:text-white transition">Admin</a></li>
                     <?php } else { ?>
                     <li class="nav-item"><a href="login.php" class="nav-link">Login</a></li>
                     <li class="nav-item"><a href="register.php" class="nav-link">Register</a></li>

@@ -35,38 +35,24 @@
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
-                                            <th>STT</th>
-                                            <th>Img</th>
-                                            <th>Name</th>
-                                            <th>#</th>
-                                            <th>#</th>
+                                            <th>Quantity</th>
+                                            <th>Product_id</th>
+                                            <th>tổng tiền</th>
+                                           
+                                       
                                         </tr>
                                     </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>STT</th>
-                                            <th>Img</th>
-                                            <th>Name</th>
-                                            <th>#</th>
-                                            <th>#</th>
-                                        </tr>
-                                    </tfoot>
+                                   
                                     <tbody>
-                                        <?php $index = 0; ?>
-                                    <?php foreach($category_list as $category) { ?>         
+                                             
                                         <tr>
-                                            <td><?php echo ++$index; ?></td>
-                                            <td><img src="<?php echo $category['img']; ?>" width="70" height="70" /></td>
-                                            <td><?php echo $category['name']; ?></td>
-                                            <td>
-                                            <a class="btn btn-primary" href="edit.php?category_id=<?php echo 
-                                            $category['id']; ?>">Edit</a>
-                                            </td>
-                                            <td>
-                                            <a class="btn btn-danger" href="delete.php?category_id=<?php echo 
-                                            $category['id']; ?> ">Delete</a></td>
+                                          
+                                            <td><?php echo $order_detail['quantity']; ?></td>
+                                            <td><?php echo $order_detail['products_id']; ?></td>
+                                            <td><?php echo $order_detail['total'];?></td>
+                                           
                                         </tr>
-                                        <?php } ?>
+                                  
                             </div>
                         </div>
                     </div>

@@ -36,35 +36,25 @@
                                     <thead>
                                         <tr>
                                             <th>STT</th>
-                                            <th>Img</th>
-                                            <th>Name</th>
+                                            <th>Code</th>
+                                            <th>User_id</th>
                                             <th>#</th>
                                             <th>#</th>
                                         </tr>
                                     </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>STT</th>
-                                            <th>Img</th>
-                                            <th>Name</th>
-                                            <th>#</th>
-                                            <th>#</th>
-                                        </tr>
-                                    </tfoot>
                                     <tbody>
                                         <?php $index = 0; ?>
-                                    <?php foreach($category_list as $category) { ?>         
+                                    <?php foreach($order_list as $order) { ?>         
                                         <tr>
                                             <td><?php echo ++$index; ?></td>
-                                            <td><img src="<?php echo $category['img']; ?>" width="70" height="70" /></td>
-                                            <td><?php echo $category['name']; ?></td>
+                                            <td><?php echo $order['code']; ?></td>
+                                            <td><?php echo $order['user_id']; ?></td>
+                                            <td><?php echo $order['status']; ?></td>
                                             <td>
-                                            <a class="btn btn-primary" href="edit.php?category_id=<?php echo 
-                                            $category['id']; ?>">Edit</a>
+                                            <a class="btn btn-primary" href="order_detail.php?order_id=<?php echo 
+                                            $order['id']; ?>">Xem chi tiết</a>
                                             </td>
-                                            <td>
-                                            <a class="btn btn-danger" href="delete.php?category_id=<?php echo 
-                                            $category['id']; ?> ">Delete</a></td>
+                                            
                                         </tr>
                                         <?php } ?>
                             </div>

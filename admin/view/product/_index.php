@@ -61,7 +61,6 @@
                                             <td><?php echo ++$index; ?></td>
                                             <td><img src="<?php echo $product['img']; ?>" width="70" height="70" /></td>
                                             <td><?php echo $product['name']; ?></td>
-                                            <td><?php echo $product['price']; ?></td>
                                             <td>
                                             <a class="btn btn-primary" href="edit.php?product_id=<?php echo 
                                             $product['id']; ?>">Edit</a>

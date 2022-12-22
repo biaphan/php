@@ -5,9 +5,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['name'];
     $img = $_POST['img'];
     $price = $_POST['price'];
-   
 
-    update_product($product_id, $name, $img,$price);
+    update_product($product_id, $name, $img,$discount,$price);
 
     header('Location: index.php');
 }

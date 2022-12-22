@@ -45,6 +45,7 @@
       <form action = "cart.php" method="post">
         <input type="hidden" name="action" value="create">
         <input type="hidden" name="productId" value="<?php echo $product['id'];?>">
+        <input type="hidden" name="quantity" value="1">
       <div class="description">
         <p>The purposes of bonsai are primarily contemplation for the viewer, and the pleasant exercise of effort and ingenuity for the grower.</p>
         <p>By contrast with other plant cultivation practices, bonsai is not intended for production of food or for medicine. Instead, bonsai practice focuses on long-term cultivation and shaping of one or more small trees growing in a container.</p>
